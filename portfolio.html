@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Our Projects</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			min-height: 100vh;
+		}
+
+		main {
+			min-height: calc(100vh - 90px);
+		}
+
+		h1 {
+			font-family: "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: clamp(2rem, 6vw, 4rem);
+			font-weight: 800;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			color: var(--text);
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<header class="top-nav">
+		<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+		<label for="nav-toggle" class="hamburger" aria-hidden="true">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<nav class="nav-menu">
+			<ul class="nav-links">
+				<li><a href="index.html#inicio">INICIO</a></li>
+				<li><a href="portfolio.html" aria-current="page">PORTFOLIO</a></li>
+				<li><a href="index.html#contacto">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="portfolio-page">
+		<section class="portfolio-hero">
+			<h1>Our Projects</h1>
+		</section>
+
+		<section class="projects-showcase">
+			<div class="projects-scroll" id="projects-scroll" aria-label="Carrusel de proyectos">
+				<a class="project-slide" href="https://alberr22.github.io/ElBucanero/" target="_blank" rel="noopener noreferrer" data-title="Carta Digital QR" data-desc="🚀 Carta Digital QR es una solución para restaurantes y negocios de hostelería que permite gestionar el menú en tiempo real desde un panel sencillo, sin dependencias técnicas ni esperas de publicación." data-bullets="Modificación dinámica del menú con actualizaciones inmediatas|Gestión sujeta a disponibilidad: activar o desactivar platos al instante|Cambio de precios y nombres en segundos desde el panel|Soporte multilenguaje para mostrar la carta en varios idiomas" data-tags="React,TypeScript,Next.js,Tailwind CSS,QR Integration,Admin Panel,Vercel" style="background-image: linear-gradient(135deg, rgba(255, 32, 0, 0.72), rgba(120, 0, 18, 0.96));">
+					<div class="menu-overlay menu-overlay-top">
+						<span class="menu-label">Carta digital con QR</span>
+						<span class="menu-arrow" aria-hidden="true"></span>
+					</div>
+					<span class="hover-eye" aria-hidden="true">
+						<svg class="hover-eye-text" viewBox="0 0 100 100" aria-hidden="true">
+							<defs>
+								<path id="hover-text-1" d="M50,50 m-33,0 a33,33 0 1,1 66,0 a33,33 0 1,1 -66,0" />
+							</defs>
+							<text>
+								<textPath href="#hover-text-1"> VISIT PROJECT · VISIT PROJECT · </textPath>
+							</text>
+						</svg>
+					</span>
+					<div class="project-media menu-stack" aria-label="Ejemplo de menu">
+						<img src="menuej2.png" alt="Menu ejemplo 1" class="menu-card menu-card-top">
+						<img src="menuej1.png" alt="Menu ejemplo 2" class="menu-card menu-card-bottom">
+					</div>
+				</a>
+
+				<article class="project-slide" data-title="Admin Dashboard ERP" data-desc="🚀 Panel centralizado para administración tipo ERP, diseñado para controlar operaciones, visualizar métricas en tiempo real y mejorar la comunicación con clientes desde un único entorno." data-bullets="Visualizador de estadísticas con métricas clave del negocio|Gestión centralizada de operaciones, estados y tareas|Canal unificado para comunicación con clientes|Panel escalable para múltiples áreas y roles de usuario" data-tags="React,TypeScript,Next.js,Tailwind CSS,Charts,Realtime Data,Role-Based Access" style="background-image: linear-gradient(135deg, rgba(255, 58, 0, 0.68), rgba(106, 0, 20, 0.95));">
+					<span class="hover-eye" aria-hidden="true">
+						<svg class="hover-eye-text" viewBox="0 0 100 100" aria-hidden="true">
+							<defs>
+								<path id="hover-text-4" d="M50,50 m-33,0 a33,33 0 1,1 66,0 a33,33 0 1,1 -66,0" />
+							</defs>
+							<text>
+								<textPath href="#hover-text-4"> VISIT PROJECT · VISIT PROJECT · </textPath>
+							</text>
+						</svg>
+					</span>
+					<div class="project-media dashboard-media" aria-label="Ejemplo de dashboard de administración">
+						<img src="admindashboard.png" alt="Dashboard de administración" class="dashboard-shot">
+					</div>
+				</article>
+
+				<article class="project-slide" data-title="Web Corporativa Multilenguaje" data-desc="🚀 Página web pensada para negocios que necesitan mostrar sus servicios con claridad y gestionar su información sin complicaciones técnicas. Incluye páginas de detalle, guardado de datos y estructura preparada para crecer." data-bullets="Páginas de detalle para cada servicio o producto, fáciles de entender|Guardado de datos para mantener información siempre actualizada|Contenido en varios idiomas para llegar a más clientes|Panel sencillo para editar textos, imágenes y secciones sin depender de terceros" data-tags="React,TypeScript,Next.js,Tailwind CSS,Database i18n,Admin Panel" style="background-image: linear-gradient(135deg, rgba(255, 72, 0, 0.66), rgba(112, 0, 16, 0.95));">
+					<div class="menu-overlay menu-overlay-top">
+						<span class="menu-label">Web con páginas detalle</span>
+						<span class="menu-arrow" aria-hidden="true"></span>
+					</div>
+					<span class="hover-eye" aria-hidden="true">
+						<svg class="hover-eye-text" viewBox="0 0 100 100" aria-hidden="true">
+							<defs>
+								<path id="hover-text-2" d="M50,50 m-33,0 a33,33 0 1,1 66,0 a33,33 0 1,1 -66,0" />
+							</defs>
+							<text>
+								<textPath href="#hover-text-2"> VISIT PROJECT · VISIT PROJECT · </textPath>
+							</text>
+						</svg>
+					</span>
+					<div class="project-media website-stack" aria-label="Ejemplo de web corporativa">
+						<img src="website2.png" alt="Website ejemplo 1" class="website-card website-card-top">
+						<img src="website1.png" alt="Website ejemplo 2" class="website-card website-card-bottom">
+					</div>
+				</article>
+
+				<article class="project-slide" data-title="BrandForge" data-desc="Identidad visual completa con banners, logos y assets listos para escalar." data-bullets="Sistema visual cohesivo y escalable|Banners, logos y piezas digitales|Guia de marca clara" data-tags="Illustrator,Figma,Photoshop" style="background-image: linear-gradient(135deg, rgba(255, 24, 0, 0.7), rgba(92, 0, 18, 0.96));">
+					<span class="hover-eye" aria-hidden="true">
+						<svg class="hover-eye-text" viewBox="0 0 100 100" aria-hidden="true">
+							<defs>
+								<path id="hover-text-3" d="M50,50 m-33,0 a33,33 0 1,1 66,0 a33,33 0 1,1 -66,0" />
+							</defs>
+							<text>
+								<textPath href="#hover-text-3"> VISIT PROJECT · VISIT PROJECT · </textPath>
+							</text>
+						</svg>
+					</span>
+					<div class="project-media">
+						<span>BrandForge</span>
+					</div>
+				</article>
+			</div>
+
+			<aside class="projects-sticky" aria-live="polite">
+				<h2 id="project-title">Carta Digital QR</h2>
+				<p id="project-desc">🚀 Carta Digital QR es una solución para restaurantes y negocios de hostelería que permite gestionar el menú en tiempo real desde un panel sencillo, sin dependencias técnicas ni esperas de publicación.</p>
+				<ul class="project-bullets" id="project-bullets">
+					<li>Modificación dinámica del menú con actualizaciones inmediatas</li>
+					<li>Gestión sujeta a disponibilidad: activar o desactivar platos al instante</li>
+					<li>Cambio de precios y nombres en segundos desde el panel</li>
+					<li>Soporte multilenguaje para mostrar la carta en varios idiomas</li>
+				</ul>
+				<div class="project-tags" id="project-tags">
+					<span>React</span>
+					<span>TypeScript</span>
+					<span>Next.js</span>
+					<span>Tailwind CSS</span>
+					<span>QR Integration</span>
+					<span>Admin Panel</span>
+					<span>Vercel</span>
+				</div>
+			</aside>
+		</section>
+	</main>
+
+	<script>
+		const navToggle = document.getElementById('nav-toggle');
+		const navItems = document.querySelectorAll('.nav-links a');
+		const scrollWrap = document.getElementById('projects-scroll');
+		const slides = Array.from(document.querySelectorAll('.project-slide'));
+		const titleEl = document.getElementById('project-title');
+		const descEl = document.getElementById('project-desc');
+		const bulletsEl = document.getElementById('project-bullets');
+		const tagsEl = document.getElementById('project-tags');
+
+		navItems.forEach((item) => {
+			item.addEventListener('click', () => {
+				navToggle.checked = false;
+			});
+		});
+
+		const setActiveSlide = (slide) => {
+			if (!slide || !titleEl || !descEl) {
+				return;
+			}
+
+			slides.forEach((item) => item.classList.remove('is-active'));
+			slide.classList.add('is-active');
+			titleEl.textContent = slide.dataset.title || '';
+			descEl.textContent = slide.dataset.desc || '';
+
+			if (bulletsEl) {
+				bulletsEl.innerHTML = '';
+				const bullets = (slide.dataset.bullets || '').split('|').filter(Boolean);
+				bullets.forEach((text) => {
+					const li = document.createElement('li');
+					li.textContent = text.trim();
+					bulletsEl.appendChild(li);
+				});
+			}
+
+			if (tagsEl) {
+				tagsEl.innerHTML = '';
+				const tags = (slide.dataset.tags || '').split(',').filter(Boolean);
+				tags.forEach((tag) => {
+					const span = document.createElement('span');
+					span.textContent = tag.trim();
+					tagsEl.appendChild(span);
+				});
+			}
+		};
+
+		if (slides.length) {
+			setActiveSlide(slides[0]);
+
+			slides.forEach((slide) => {
+				slide.style.setProperty('--cursor-x', '50%');
+				slide.style.setProperty('--cursor-y', '50%');
+				slide.addEventListener('mousemove', (event) => {
+					const rect = slide.getBoundingClientRect();
+					const x = ((event.clientX - rect.left) / rect.width) * 100;
+					const y = ((event.clientY - rect.top) / rect.height) * 100;
+					slide.style.setProperty('--cursor-x', `${x}%`);
+					slide.style.setProperty('--cursor-y', `${y}%`);
+				});
+			});
+
+			if ('IntersectionObserver' in window) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								setActiveSlide(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.6 }
+				);
+
+				slides.forEach((slide) => observer.observe(slide));
+			} else {
+				window.addEventListener('scroll', () => {
+					const midpoint = window.scrollY + window.innerHeight / 2;
+					let closest = slides[0];
+					let closestDistance = Infinity;
+
+					slides.forEach((slide) => {
+						const slideMid = slide.getBoundingClientRect().top + window.scrollY + slide.offsetHeight / 2;
+						const distance = Math.abs(midpoint - slideMid);
+						if (distance < closestDistance) {
+							closest = slide;
+							closestDistance = distance;
+						}
+					});
+
+					setActiveSlide(closest);
+				});
+			}
+		}
+	</script>
+</body>
+</html>

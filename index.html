@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Corcovado Code Studio</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top-nav">
+		<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+		<label for="nav-toggle" class="hamburger" aria-hidden="true">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<nav class="nav-menu">
+			<ul class="nav-links">
+				<li><a href="#inicio" aria-current="page">INICIO</a></li>
+				<li><a href="portfolio.html">PORTFOLIO</a></li>
+				<li><a href="#contacto">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="inicio" class="signature-hero">
+			<div class="signature-card">
+				<div class="signature-side signature-side-left">
+					<span class="star">✶</span>
+					<span class="label">EST.</span>
+				</div>
+
+				<div class="signature-center">
+					<h1>
+						<span class="line-main">Corcövâdo</span>
+						<span class="line-sub">Cöde Stûdio</span>
+					</h1>
+				</div>
+
+				<div class="signature-side signature-side-right">
+					<span class="label">2026</span>
+					<span class="star">✶</span>
+				</div>
+			</div>
+		</section>
+
+		<section id="portfolio" class="project-section">
+			<div class="project-card">
+				<h2>Proyecto en construcción</h2>
+				<p class="project-intro">
+					En Corcovado Code Studio, somos su socio estratégico para llevar su negocio al siguiente nivel digital.
+				</p>
+
+				<div class="project-grid">
+					<article class="project-item">
+						<h3>Web &amp; Menús Digitales</h3>
+						<p>Desarrollamos soluciones web a medida, digitalización de menús y sitios atractivos con panel de administración intuitivo para que tenga el control total.</p>
+					</article>
+
+					<article class="project-item">
+						<h3>Gestión Centralizada</h3>
+						<p>Unificamos sus recursos y operaciones en una experiencia moderna y eficiente, simplificando procesos para que su equipo trabaje con mayor claridad.</p>
+					</article>
+
+					<article class="project-item">
+						<h3>Branding Completo</h3>
+						<p>Diseñamos identidad de marca, logos y banners que capturan la esencia de su empresa para destacar y crecer en el entorno digital sin complicaciones técnicas.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section id="contacto" class="about-section">
+			<div class="about-card">
+				<h2>Sobre Nosotros</h2>
+				<p class="about-intro">
+					Somos un estudio enfocado en crear experiencias digitales elegantes, funcionales y con identidad propia.
+				</p>
+
+				<div class="about-grid">
+					<a class="about-item" href="https://github.com/alberr22" target="_blank" rel="noopener noreferrer" aria-label="GitHub alberr22">
+						<img class="about-avatar" src="https://github.com/alberr22.png" alt="Avatar de alberr22" loading="lazy">
+						<span class="about-label">GitHub</span>
+						<strong>@alberr22</strong>
+					</a>
+
+					<a class="about-item" href="https://github.com/jonmazh" target="_blank" rel="noopener noreferrer" aria-label="GitHub jonmazh">
+						<img class="about-avatar" src="https://github.com/jonmazh.png" alt="Avatar de jonmazh" loading="lazy">
+						<span class="about-label">GitHub</span>
+						<strong>@jonmazh</strong>
+					</a>
+
+					<div class="about-item contact-item" aria-label="Correos de contacto">
+						<span class="about-label">Email</span>
+						<a class="contact-link" href="mailto:jonmazh@gmail.com">jonmazh@gmail.com</a>
+						<a class="contact-link" href="mailto:a.acebesanchez@gmail.com">a.acebesanchez@gmail.com</a>
+					</div>
+
+					<div class="about-item contact-item" aria-label="WhatsApp de contacto">
+						<span class="about-label">WhatsApp</span>
+						<a class="contact-link" href="https://wa.me/34620357462" target="_blank" rel="noopener noreferrer">+34 620357462</a>
+						<a class="contact-link" href="https://wa.me/34688711789" target="_blank" rel="noopener noreferrer">+34 688 71 17 89</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		const navToggle = document.getElementById('nav-toggle');
+		const navItems = document.querySelectorAll('.nav-links a');
+		const signatureCard = document.querySelector('.signature-card');
+		const projectCard = document.querySelector('.project-card');
+		const projectItems = document.querySelectorAll('.project-item');
+
+		const motionEnabled = true;
+
+		navItems.forEach((item) => {
+			item.addEventListener('click', () => {
+				navToggle.checked = false;
+			});
+		});
+
+		if (motionEnabled) {
+			document.body.classList.add('motion-enhanced');
+
+			const revealTargets = document.querySelectorAll('.project-card, .project-item, .about-card, .about-item');
+
+			if ('IntersectionObserver' in window) {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add('is-visible');
+							} else {
+								entry.target.classList.remove('is-visible');
+							}
+						});
+					},
+					{ threshold: 0.18 }
+				);
+
+				revealTargets.forEach((item) => observer.observe(item));
+			} else {
+				revealTargets.forEach((item) => item.classList.add('is-visible'));
+			}
+
+			const aboutCard = document.querySelector('.about-card');
+			const interactiveCards = [signatureCard, projectCard, aboutCard].filter(Boolean);
+			let targetX = 0;
+			let targetY = 0;
+			let currentX = 0;
+			let currentY = 0;
+
+			const animateTilt = () => {
+				currentX += (targetX - currentX) * 0.08;
+				currentY += (targetY - currentY) * 0.08;
+				interactiveCards.forEach((card, index) => {
+					const depth = index === 0 ? 1 : 0.7;
+					card.style.transform = `perspective(1200px) rotateX(${(currentY * -4 * depth).toFixed(2)}deg) rotateY(${(currentX * 6 * depth).toFixed(2)}deg)`;
+				});
+				requestAnimationFrame(animateTilt);
+			};
+
+			window.addEventListener('pointermove', (event) => {
+				targetX = (event.clientX / window.innerWidth - 0.5) * 2;
+				targetY = (event.clientY / window.innerHeight - 0.5) * 2;
+			});
+
+			window.addEventListener('pointerleave', () => {
+				targetX = 0;
+				targetY = 0;
+			});
+
+			animateTilt();
+
+			const spawnParticles = () => {
+				if (!projectCard) {
+					return;
+				}
+
+				for (let index = 0; index < 14; index += 1) {
+					const particle = document.createElement('span');
+					particle.className = 'particle';
+					particle.style.left = `${Math.random() * 100}%`;
+					particle.style.top = `${Math.random() * 100}%`;
+					particle.style.setProperty('--drift-x', `${(Math.random() - 0.5) * 80}px`);
+					particle.style.setProperty('--drift-y', `${(Math.random() - 0.5) * 80}px`);
+					particle.style.setProperty('--duration', `${4.5 + Math.random() * 4}s`);
+					particle.style.animationDelay = `${Math.random() * 3}s`;
+					projectCard.appendChild(particle);
+				}
+			};
+
+			spawnParticles();
+
+			const burstFlash = () => {
+				const randomItem = projectItems[Math.floor(Math.random() * projectItems.length)];
+				if (randomItem) {
+					randomItem.classList.add('card-flash');
+					setTimeout(() => randomItem.classList.remove('card-flash'), 520);
+				}
+			};
+
+			setInterval(burstFlash, 2600);
+		}
+	</script>
+</body>
+</html>
+
