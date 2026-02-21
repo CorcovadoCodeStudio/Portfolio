@@ -474,6 +474,33 @@ body {
 	transform: translate(-10px, 10px) rotate(-2deg);
 }
 
+.qr-v2-stack {
+	position: relative;
+}
+
+.qr-v2-base {
+	width: min(96%, 820px);
+	transform: translate(-4px, 8px) rotate(-1deg);
+}
+
+.qr-v2-qr {
+	position: absolute;
+	left: 74%;
+	top: 58%;
+	width: min(26%, 180px);
+	max-width: 180px;
+	min-width: 100px;
+	transform: translate(-50%, -50%) rotate(2deg);
+	opacity: 1;
+	z-index: 4;
+	border-radius: 0.9rem;
+}
+
+.project-slide:hover .qr-v2-qr,
+.project-slide:focus-within .qr-v2-qr {
+	transform: translate(-50%, -50%) rotate(5deg) scale(1.03);
+}
+
 .projects-sticky {
 	position: sticky;
 	top: 7.2rem;
